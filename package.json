@@ -1,0 +1,31 @@
+{
+  "name": "projectpotato",
+  "version": "1.0.0",
+  "description": "help for create android server",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilentTTxo/ProjectPotato.git"
+  },
+  "keywords": [
+    "android",
+    "server",
+    "linuxdeploy"
+  ],
+  "author": "SilentTT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilentTTxo/ProjectPotato/issues"
+  },
+  "homepage": "https://github.com/SilentTTxo/ProjectPotato#readme",
+  "dependencies": {
+    "npm": "^6.4.1"
+  },
+  "devDependencies": {
+    "electron": "^3.0.10"
+  }
+}

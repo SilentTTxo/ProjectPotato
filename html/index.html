@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  
+  <script src="res/js/init.js"></script>
+  <script src="res/js/jquery.js"></script>
+  <script src="res/js/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h2>TEST</h2>
+    data is {{ phoneList }} tt: {{ tt }}
+  </div>
+</body>
+<script>
+  let globalData = window.nodeRequire('electron').remote.getGlobal('data');
+  let vm = new Vue({
+    el: '#app',
+    data: globalData
+  })
+</script>
+
+</html>
