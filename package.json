@@ -4,7 +4,7 @@
   "description": "help for create android server",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "electron . --debug",
     "start": "electron ."
   },
   "repository": {
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/SilentTTxo/ProjectPotato#readme",
   "dependencies": {
+    "iconv-lite": "^0.4.24",
     "npm": "^6.4.1"
   },
   "devDependencies": {

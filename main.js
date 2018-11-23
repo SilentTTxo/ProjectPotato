@@ -55,10 +55,3 @@ app.on('activate', () => {
 
 // 在这个文件中，你可以续写应用剩下主进程代码。
 // 也可以拆分成几个文件，然后用 require 导入。
-
-function addData(){
-  setInterval(function(){
-    global.data.phoneList.push(4)
-  },1000)
-}
-addData()

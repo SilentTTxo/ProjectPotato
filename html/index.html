@@ -4,24 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World!</title>
-  
+
   <script src="res/js/init.js"></script>
   <script src="res/js/jquery.js"></script>
   <script src="res/js/vue.js"></script>
+
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+  <link href="res/css/index.css" rel="stylesheet">
 </head>
 
 <body>
   <div id="app">
-    <h2>TEST</h2>
-    data is {{ phoneList }} tt: {{ tt }}
+    <div class="row">
+      <table class="table table-striped col-lg-8">
+        <tr>
+          <th>ID</th>
+          <th>State</th>
+          <th>Option</th>
+        </tr>
+        <tr v-for="phone in phoneList">
+          <td>{{ phone.id }}</td>
+          <td>{{ phone.state }}</td>
+          <td>
+            <button id="init" @click="init" :deviceId="phone.id">初始化</button>
+            <button id="install" @click="install" :deviceId="phone.id">安装</button>
+            <button id="clear" @click="clear" :deviceId="phone.id">删除系统</button>
+            <button id="install" @click="telnet" :deviceId="phone.id">重启 telnet</button>
+          </td>
+        </tr>
+      </table>
+      <div class="col-lg-4 codeArea">
+        <code class="code" id="shell" >
+          {{ shell }}
+        </code>
+      </div>
+    </div>
+
   </div>
 </body>
-<script>
-  let globalData = window.nodeRequire('electron').remote.getGlobal('data');
-  let vm = new Vue({
-    el: '#app',
-    data: globalData
-  })
-</script>
+<script src="res/js/page/index.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.1.3/js/bootstrap.js"></script>
 
 </html>
